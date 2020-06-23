@@ -1,4 +1,4 @@
-My plan for an app to create this week is a workout app called Donzo.
+My plan for an app is a workout app called Donzo.
 
 A user will be able to do the following things in this app
 
@@ -17,7 +17,7 @@ The frontend or user interface side of Donzo is where the user will be able to e
 1. date, 
 2. workout type (a dropdown from a list),
 3. duration (in minutes),
-4. mood after workout (from a dropdown list) *not required
+4. mood after workout (from a dropdown list) *optional
 
 The user will also be able to view all of their workouts on a separate screen (Edit/View Workouts). 
 
@@ -30,11 +30,19 @@ Hope to be able to add if there is time:
 
 Backend/ .NetCore
 
+API will handle the following queries to and deliver data from the database to the frontend:
+
+Create Workout (POST)
+View Workout (GET one)
+Edit Workout (PUT)
+View Workouts (GET all)
+Delete Workout (DELETE one)
+Export Workouts (possibly to excel spreadsheet or plain txt to user's email)
 
 
 Database
 
 Entities:
 
-User - name, password (?)
+User - username, first name, last name, email, password (?)
 Workout - date, type, duration (in minutes), mood
