@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DonzoApp.API.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace DonzoApp.API.Controllers
 {
@@ -10,18 +12,28 @@ namespace DonzoApp.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly DataContext _context;
+        public ValuesController(DataContext context) // injecting DataContext
+        {
+            _context = context;
+
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<IActionResult> GetValues()
         {
-            return new string[] { "value1", "value2" };
+            var values = await _context.Values.ToListAsync();
+
+            return Ok(values);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<IActionResult> GetValue(int id)
         {
-            return "value";
+            var value = await _context.Values.FirstOrDefaultAsync(x => x.Id == id); // using first would create an exception, using FoD to return the first of the correct type or null
+
+            return Ok(value); // will return an empty ok response (204) if there is no id that matches
         }
 
         // POST api/values
