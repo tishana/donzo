@@ -13,19 +13,19 @@ Create Read Update Delete covered.
 
 FrontEnd/ Angular
 
-The frontend or user interface side of Donzo is where the user will be able to enter all of thrier information pertaining to workouts. There will be a form for workout entries that will include:
-1. date, 
-2. workout type (a dropdown from a list),
-3. duration (in minutes),
-4. mood after workout (from a dropdown list) *optional
+The frontend or user interface side of Donzo is where:
+- The user will be able to log in
+
+- The user will be able to enter all of their information pertaining to workouts. There will be a form for workout entries that will include:
+    1. date, 
+    2. workout type (a dropdown from a list),
+    3. duration (in minutes),
+    4. mood after workout (from a dropdown list) *optional
 
 The user will also be able to view all of their workouts on a separate screen (Edit/View Workouts). 
 
 A user will be able to edit a workout entry form (Update) with a button on the View Workouts screen and/or a button on the View Workout screen .
 
-Hope to be able to add if there is time:
-
-- Login and Account Profile for multiple users.
 
 
 Backend/ .NetCore
@@ -41,8 +41,9 @@ Export Workouts (possibly to excel spreadsheet or plain txt to user's email)
 
 
 Database
+DB Browser for SQLite
 
 Entities:
 
 User - username, first name, last name, email, password (?)
-Workout - date, type, duration (in minutes), mood
+Workout - userId (fk), date, name, duration (in minutes), mood
