@@ -4583,11 +4583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
       "projectName": "DonzoApp.API",
-      "projectPath": "c:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
+      "projectPath": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
       "packagesPath": "C:\\Users\\TTrainor\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\obj\\",
+      "outputPath": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4660,7 +4660,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

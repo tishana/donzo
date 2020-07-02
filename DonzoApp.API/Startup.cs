@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using DonzoApp.API.Data;
+using DonzoApp.API.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -55,7 +59,23 @@ namespace DonzoApp.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler(builder => // adds middleware that catches exceptions
+                {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
+                        var err = context.Features.Get<IExceptionHandlerFeature>();
+                        if (err != null)
+                        {
+                            context.Response.AddApplicationError(err.Error.Message);
+                            await context.Response.WriteAsync(err.Error.Message); // puts error message in the http response
+                        }
+                    });
+                });
+            }
             // app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -16,6 +16,20 @@ namespace DonzoApp.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.1");
 
+            modelBuilder.Entity("DonzoApp.API.Models.Mood", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Moods");
+                });
+
             modelBuilder.Entity("DonzoApp.API.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -48,6 +62,67 @@ namespace DonzoApp.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Values");
+                });
+
+            modelBuilder.Entity("DonzoApp.API.Models.Workout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateCompleted")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MoodIdId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("UserIdId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("WTypeIdId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MoodIdId");
+
+                    b.HasIndex("UserIdId");
+
+                    b.HasIndex("WTypeIdId");
+
+                    b.ToTable("Workouts");
+                });
+
+            modelBuilder.Entity("DonzoApp.API.Models.WorkoutType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WorkoutType");
+                });
+
+            modelBuilder.Entity("DonzoApp.API.Models.Workout", b =>
+                {
+                    b.HasOne("DonzoApp.API.Models.Mood", "MoodId")
+                        .WithMany()
+                        .HasForeignKey("MoodIdId");
+
+                    b.HasOne("DonzoApp.API.Models.User", "UserId")
+                        .WithMany("Workouts")
+                        .HasForeignKey("UserIdId");
+
+                    b.HasOne("DonzoApp.API.Models.WorkoutType", "WTypeId")
+                        .WithMany()
+                        .HasForeignKey("WTypeIdId");
                 });
 #pragma warning restore 612, 618
         }
