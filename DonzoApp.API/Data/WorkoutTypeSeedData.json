@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "Name": "Resistance Training"
+    },
+    {
+        "Id": 2,
+        "Name": "Cardio"
+    },
+    {
+        "Id": 3,
+        "Name": "Yoga/Pilates"
+    },
+    {
+        "Id": 4,
+        "Name": "HIIT"
+    }
+]
