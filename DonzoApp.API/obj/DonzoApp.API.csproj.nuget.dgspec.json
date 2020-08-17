@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj": {}
+    "/Users/tishushu/Projects/donzo/DonzoApp.API/DonzoApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj": {
+    "/Users/tishushu/Projects/donzo/DonzoApp.API/DonzoApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
+        "projectUniqueName": "/Users/tishushu/Projects/donzo/DonzoApp.API/DonzoApp.API.csproj",
         "projectName": "DonzoApp.API",
-        "projectPath": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\DonzoApp.API.csproj",
-        "packagesPath": "C:\\Users\\TTrainor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TTrainor\\Documents\\Projects\\Donzo\\donzo\\DonzoApp.API\\obj\\",
+        "projectPath": "/Users/tishushu/Projects/donzo/DonzoApp.API/DonzoApp.API.csproj",
+        "packagesPath": "/Users/tishushu/.nuget/packages/",
+        "outputPath": "/Users/tishushu/Projects/donzo/DonzoApp.API/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TTrainor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/tishushu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.106\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
         }
       }
     }
