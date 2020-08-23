@@ -1,35 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { Component, OnInit } from '@angular/core'
+import { AuthService } from '../_services/auth.service'
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  model: any = {};
+  model: any = {}
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
-    this.authService.login(this.model).subscribe(next => {
-      console.log('Login successful');
-    }, error => {
-      console.log(error);
-    });
+    this.authService.login(this.model).subscribe(
+      (next) => {
+        console.log('Login successful')
+      },
+      (error) => {
+        console.log(error)
+      },
+    )
   }
 
   loggedIn() {
-    const token = localStorage.getItem('token');
-    return !!token;
+    const token = localStorage.getItem('token')
+    return !!token
   }
 
-
   logOut() {
-    localStorage.removeItem('token');
-    console.log('logged out');
+    localStorage.removeItem('token')
+    console.log('You have logged out...')
   }
 }
