@@ -1,4 +1,6 @@
-<h3>Your Workouts</h3>
-<div *ngFor="workout; of: workouts">
-  <mat-card></mat-card>
+<div>
+    <h3>Your Workouts</h3>
+    <div *ngFor="workout of workouts">
+        <mat-card> {{workout.workoutId}}</mat-card>
+    </div>
 </div>
